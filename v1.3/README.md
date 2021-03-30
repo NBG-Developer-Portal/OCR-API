@@ -16,8 +16,14 @@ This API provides a standard RESTful interface that enables a user to:
 -  Greek driving licence
 -  Greek ID
 -  Greek tax form
--  Greek energy bill (issued by DEH)
--  Greek water bill (issued by EYDAP),
+-  Greek VAT certificate
+-  Greek reprint of VAT certificate
+-  Greek energy bill (issued by DEH, Nova Energy, Petrogaz, Protergia, Volterra, WattVolt, Ζενιθ)
+-  Greek water bill (issued by EYDAP)
+-  Greek telephone landline bill (Cosmote, Nova, Vodafone, Wind)
+-  Greek telephone mobile bill (Cosmote, Vodafone, Wind)
+-  Tax Income Corporate
+-  Tax Form E3
 
 * By using the endpoint _POST_ /ocr/uploadDocument in order to get the document's recognized data. 
 
@@ -30,12 +36,12 @@ In this scenario we will be using the API to provide data to a *Customer Onboard
 The main functionality of the application is to identify files or images and extract the basic information from them. For example, a user upload his identity, the application "understands" that it is a greek ID and extracts his name, surname and the other ID's details.
 
 First of all, we will create our sandbox by making an **HTTP POST** request to the following URL
-> https://apis.nbg.gr/sandbox/ocr/headers/v1.3/sandbox
+> https://apis.nbg.gr/sandbox/ocr/oauth2/v1.3/sandbox
 
 With a request body:
 ```
  {
-   "sandbox_id": "113E4C18-FA0D-49B7-992E-F90E7CC3922B"
+   "sandbox_id": "MySandbox"
  }
 ``` 
 
