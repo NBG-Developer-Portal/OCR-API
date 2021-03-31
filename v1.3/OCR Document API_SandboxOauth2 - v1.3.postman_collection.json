@@ -75,8 +75,7 @@
 							},
 							{
 								"key": "application_id",
-								"value": "{{application_id}}",
-								"disabled": true
+								"value": "{{application_id}}"
 							},
 							{
 								"key": "sandbox-id",
