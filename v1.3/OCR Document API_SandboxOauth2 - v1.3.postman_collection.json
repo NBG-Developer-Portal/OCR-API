@@ -1,8 +1,7 @@
 {
 	"info": {
+		"_postman_id": "89d7f234-2e9a-4b39-8791-c6af8c299cb4",
 		"name": "OCR Document API - v1.3",
-		"_postman_id": "b7e56ed7-6188-ea1c-72d2-1c7e453813ab",
-		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -111,7 +110,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "5eb3725c-29dd-473a-a8c9-ace82407b75d",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -121,7 +119,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "50b2aa47-0fdd-4b77-bfb1-9d118add6fbd",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -132,7 +129,6 @@
 		},
 		{
 			"name": "sandbox",
-			"description": "Folder for sandbox",
 			"item": [
 				{
 					"name": "Create Sandbox",
@@ -183,10 +179,6 @@
 								"value": "{{client_id}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{root_url}}/sandbox/{{sandbox_id}}",
 							"host": [
@@ -266,11 +258,11 @@
 					"response": []
 				}
 			],
+			"description": "Folder for sandbox",
 			"event": [
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "cca52aa8-5386-4eed-819b-feea08aa1664",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -280,7 +272,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "4ad8c1f7-52c0-4ddc-bc77-4035cc63dd7c",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -294,6 +285,46 @@
 		"type": "oauth2",
 		"oauth2": [
 			{
+				"key": "accessTokenUrl",
+				"value": "{{token_url}}",
+				"type": "string"
+			},
+			{
+				"key": "clientSecret",
+				"value": "{{client_secret}}",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "{{client_id}}",
+				"type": "string"
+			},
+			{
+				"key": "challengeAlgorithm",
+				"value": "S256",
+				"type": "string"
+			},
+			{
+				"key": "scope",
+				"value": "{{scope}}",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "client_credentials",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "client_authentication",
+				"value": "header",
+				"type": "string"
+			},
+			{
 				"key": "accessToken",
 				"value": "49cb73771e06ed34d484951b734f5aad5b29f798035a01fcf87690a10ac001a7",
 				"type": "string"
@@ -302,11 +333,6 @@
 				"key": "tokenType",
 				"value": "Bearer",
 				"type": "string"
-			},
-			{
-				"key": "addTokenTo",
-				"value": "header",
-				"type": "string"
 			}
 		]
 	},
@@ -314,7 +340,6 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "53a8e8dc-938b-4050-9bb9-62685533987e",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -324,7 +349,6 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "30f97e48-0c33-4137-be09-f83fab9185e7",
 				"type": "text/javascript",
 				"exec": [
 					""
